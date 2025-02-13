@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hackathon Hub: Connecting Creators for Change</title>
+    <!-- Linking the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar-container">
+        <div class="navbar">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#news">News</a></li>
+                <li ><button id="theme-button">Toggle Dark Mode</button></li>
+              <li ><button id="reduce-motion-button">Reduce Motion</button></li>
+              
+            </ul>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header-container">
+        <div class="header">
+            <img id="header-img" src="hackathonLogo.png" alt="Header Image" class="header-item">
+            <div id="header-content" class="header-item">
+                <h1>HackHub</h1>
+                <h3>Connecting Creators for Change</h3>
+                <button type="button" class="header-button">Find Hackathons Near You</button>
+                <button type="button" class="header-button">Share Your Hackathon Experience</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other sections -->
+  <!-- Other sections -->
+  <div class="section-container">
+      <div id="about" class="section revealable"> <!-- Add revealable class here -->
+        
+          <h2>About My Topic</h2>
+          <p>Hackathons have become essential events in the tech industry, fostering innovation, creativity, and collaboration among participants. However, finding the right hackathon to participate in can be challenging, especially for newcomers. The Hackathon Hub aims to address this issue by providing a centralized platform where individuals can easily discover, join, and organize hackathons. </p>
+      </div>
+
+      <div class="section revealable"> <!-- Add revealable class here -->
+          <h2>Data</h2>
+        <canvas id="hackathonChart" width="200" height="100"></canvas>
+          <p>One of the major challenges in hackathons is the lack of diversity among participants. Studies have shown that less than 15% of hackathon attendees are women, indicating a significant gender gap in the tech industry.</p>
+      </div>
+
+    <div id="impact" class="section">
+      <div class="section revealable">
+        <h2>Impact!</h2>
+        <div class="impact-container">
+            <div class="impact-item">
+                <img src="HackPic1.png" alt="Hackathon participants collaborating" width="400" height="250" />
+                <p>Description: Hackathon participants collaborating on a project.</p>
+            </div>
+            <div class="impact-item">
+                <img src="hackathon-presentation.jpg" alt="Hackathon team presenting their project" width="400" height="250" />
+                <p>Description: Hackathon team presenting their project to judges and fellow participants.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="news" class="section">
+      <div class="section revealable">
+        <h2>Recent News</h2>
+        <div class="news-card">
+            <img src="news1.jpg" alt="News Article 1">
+            <div class="news-content">
+                <h3>IBM Announces Global Call for Code Artificial Intelligence Hackathon Winners</h3>
+                <p>Brief summary of the article content. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="https://cointelegraph.com/news/ibm-announces-global-call-for-code-artificial-intelligence-hackathon-winners" target="_blank">Read more</a>
+            </div>
+        </div>
+        <div class="news-card">
+            <img src="news2.jpg" alt="News Article 2">
+            <div class="news-content">
+                <h3>Colosseum Online Platform Manages Solana Hackathons Accelerator Program</h3>
+                <p>Brief summary of the article content. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="https://cointelegraph.com/news/colosseum-online-platform-manages-solana-hackathons-accelerator-program" target="_blank">Read more</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="petition" class="petition revealable"> <!-- Add revealable class here -->
+      <h2>Sign Our Petition 📢</h2>
+      <p id="counter">🖊️ 3 people have signed this petition and support this cause.</p>
+        <div class="petition-container">
+
+
+          <div class="petition-para">
+            <h4>Every participant in a hackathon brings unique skills, ideas, and perspectives to the table. With each line of code written, each problem solved, and each innovative solution created, we are not just building projects; we are shaping the future of technology and driving positive change. By signing this petition, you're not only showing your support for hackathons; you're championing a culture of collaboration, innovation, and inclusivity in the tech community. Your signature is a testament to the transformative power of hackathons, where individuals from diverse backgrounds come together to tackle real-world challenges and create impactful solutions. Together, let's empower more creators, foster more connections, and inspire the next generation of changemakers through the spirit of hackathons. Join us today and be a part of revolutionizing the way we innovate for a better tomorrow.</h4>
+          </div>
+
+              <div class="signatures">
+                  <p>🖊️ DJ from Brooklyn supports this.</p>
+                  <p>🖊️ Amy from Queens supports this.</p>
+                  <p>🖊️ Teresa from Harlem supports this.</p>
+              </div>
+          </div>
+          <!--- Sign Petition Form --->
+      <!-- Sign Petition Form -->
+      <form id="sign-petition" title="sign-petition" class="petition-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required> <!-- Ensure the ID is "name" -->
+          <label for="hometown">Hometown:</label>
+          <input type="text" id="hometown" name="hometown" required> <!-- Ensure the ID is "hometown" -->
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+      </form>
+          <!--- Sign Now Button --->
+          <button id="sign-now-button">Sign Now</button>
+      </div>
+
+  </div>
+
+      <!-- Modal -->
+      <div id="thanks-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div id="modal-text-container">
+            <p id="thanks-modal-content">Thank you for your submission!</p>
+            <!-- You can add a button here for the stretch feature -->
+          </div>
+          <img src=robo.webp alt="Celebration Image">
+        </div>
+      </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Data for the chart
+        var ctx = document.getElementById('hackathonChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Male', 'Female'],
+                datasets: [{
+                    label: 'Hackathon Participants by Gender',
+                    data: [85, 15], // Change these values according to your data
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 99, 132, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+  <script src="index.js"></script>
+</body>
+
+</html>

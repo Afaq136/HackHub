@@ -1,0 +1,293 @@
+/* Combined CSS styling */
+
+/* Step 3: Use at least six unique CSS properties */
+body {
+    background-color: white; /* Change background color to white */
+    color: black; /* Change text color to black */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 100px;
+}
+
+/* Refactor header class to use flexbox */
+.header {
+    background-color: #f4f0f0;
+    padding: 20px;
+    padding-top: 40px; /* Add padding at the top */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Align items horizontally with space between them */
+    align-items: center; /* Center align items vertically */
+}
+
+#header-content {
+    text-align: left; /* Align text to the left */
+}
+
+#header-img {
+    margin-left: 20px; /* Add left margin */
+    margin-right: 20px; /* Add right margin */
+    width: 150px; /* Set the width of the image */
+    max-width: 100%; /* Set the maximum width of the image */
+}
+
+.header-button {
+    background-color: #87226c; /* Set background color */
+    color: #fff; /* Set text color */
+    font-size: 14px; /* Set font size */
+    padding: 8px 16px; /* Add padding to the buttons */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin: 0 5px; /* Add margin to separate the buttons */
+}
+
+.section {
+    text-align: center;
+    margin-bottom: 80px; /* Increase the bottom margin */
+    margin-top: 80px; /* Increase the top margin */
+}
+
+.section p {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+/* Refactor navigation bar to use flexbox */
+.navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Use flexbox */
+    justify-content: flex-end; /* Align items to the right */
+    margin: 20px; /* Margin around the navbar */
+}
+
+.navbar li {
+    margin: 0 10px; /* Margin between list items */
+}
+
+.navbar li a {
+    text-decoration: none; /* Remove underline */
+    color: #000000; /* Text color */
+    padding: 10px; /* Padding around text */
+}
+
+.navbar li a:hover {
+    background-color: #87226c; /* Darken background color on hover */
+}
+
+/* Step 4: Create at least three unique class or id selectors to style a header */
+/* Add more margin to the header items */
+.header-item {
+    flex: 1;
+    margin: 10px; /* Increase the margin */
+}
+
+/* Customizing header-left and header-right sections */
+.header-left {
+    width: 70%; /* Set width to 70% */
+}
+
+.header-right {
+    width: 30%; /* Set width to 30% */
+}
+
+.section {
+    text-align: center; /* Center align the content */
+    margin-bottom: 150px; /* Decrease margin at the bottom */
+}
+#about.section {
+    margin-top: 80px; /* Increase margin at the bottom for more space between sections */
+}
+.section p {
+    display: block; /* Ensure each paragraph is displayed as a block element */
+    margin: 0 auto; /* Center the paragraphs horizontally */
+    max-width: 80%; /* Decrease the maximum width */
+}
+
+canvas#hackathonChart {
+    padding: 10px; /* Add padding to the chart */
+    margin: 100px; /* Add margins around the chart */
+    border: 1px solid #ccc; /* Add a border to the chart */
+}
+
+/* Add styles for the container and items in the Impact section */
+.impact-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.impact-item {
+    width: 48%; /* Set width for each item */
+}
+
+.impact-item img {
+    width: 60%; /* Set the width to fill the container */
+  height: auto;
+    max-width: 60%; /* Ensure images don't exceed their original size */
+    max-height: 60%; /* Ensure images don't exceed their original size */
+}
+
+
+.recent-news {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px; /* Adjust as needed */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.recent-news h2 {
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+    text-align: left; /* Align heading text to the left */
+}
+.news-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px; /* Increase the bottom margin */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.news-card img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-content h3 {
+    margin-top: 0;
+}
+
+.news-content p {
+    margin-bottom: 15px;
+}
+
+.news-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Customize Dark Mode Theme */
+.dark-mode {
+    background-color: black; /* Set background color to black */
+    color: white; /* Set text color to white */
+}
+
+/* Additional dark mode styling */
+.dark-mode .navbar li a {
+    color: #ffffff; /* Set text color of navigation links to white */
+}
+
+.dark-mode .header {
+    background-color: #340f12; /* Change header background color to dark gray in dark mode */
+}
+
+.dark-mode .section {
+    background-color: #212121; /* Change section background color to dark gray in dark mode */
+}
+
+/* Add style to button */
+#theme-button {
+    background-color: #707070; /* Set background color */
+    color: #fff; /* Set text color */
+    font-size: 16px; /* Increase font size */
+    padding: 10px 20px; /* Add padding to the buttons */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin: 0 5px; /* Add margin to separate the buttons */
+    text-transform: uppercase; /* Convert text to uppercase */
+    font-weight: bold; /* Make text bold */
+    border: none; /* Remove border */
+}
+
+
+.petition {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px; /* Adjust as needed */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.petition h2 {
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+}
+
+.petition-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.petition-para {
+    width: 55%;
+    text-align: left; /* Align paragraph text to the left */
+}
+
+.signatures {
+    width: 45%;
+}
+
+/* Add to CSS file */
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background: pink;
+}
+
+/* Add to CSS file */
+.revealable {
+  opacity: 0; /* Initially hide the revealable containers */
+  transition: opacity 0.5s ease; /* Add a smooth transition effect for opacity */
+}
+
+.revealable.active {
+  opacity: 1; /* Set opacity to 1 to reveal the container when active class is added */
+}
+
+/* The modal that covers the background and prevents user interactions */
+.modal {
+  display: none; /* Hide the modal by default */
+  position: fixed; /* Keep the modal in one place */
+  z-index: 2; /* Position the modal on top of all other elements on the screen */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.4); /* 40% opacity black - other elements can still be seen */
+  flex-direction: column; /* Center the content on the screen */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Box that contains all the content and images */
+.modal-content {
+  background-color: lightsteelblue; /* Update the colors and font sizes as you like */
+  color: black;
+  text-align: center;
+  font-size: 3rem;
+  display: flex; /* Center all items */
+  justify-content: center;
+  align-items: center;
+}
+
+#thanks-modal-content {
+  width: 20rem; /* Set a default width for the text container */
+}
+
+#modal-text-container {
+  display: flex; /* Center the text and buttons */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
